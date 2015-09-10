@@ -1,0 +1,14 @@
+{
+  "name": "hubot-note-display",
+  "version": "1.0.0",
+  "description": "displays message on office wall using rpi e-paper display",
+  "main": "notedisplay.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mrq",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^2.2.9"
+  }
+}

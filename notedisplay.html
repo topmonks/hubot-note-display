@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>display</title>
+  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+  <script src="config.js"></script>
+  <script>
+    var db = new Firebase(config.firebase).child('notes');
+    db.limitToLast(1).on('child_added', function(res) {
+      var node = res.val();
+      document.getElementById('text').innerHTML = node.text;
+      document.getElementById('author').innerHTML = node.author;
+    });
+  </script>
+</head>
+<body style="text-align: center;">
+  <h1 id="text" style="font-size: 8em;"></h1>
+  <h2 id="author" style="font-size: 4em;"></h2>
+</body>
+</html>
